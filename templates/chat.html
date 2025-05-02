@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - DisasterAidBot</title>
+    <link rel="stylesheet" href="/static/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-box">
+            <h1>Chat with DisasterAidBot</h1>
+            <div class="chat-history">
+                {% for message in history %}
+                    <div class="chat-message">
+                        <p><strong>You:</strong> {{ message.user }}</p>
+                        <p><strong>Nigga:</strong> {{ message.bot }}</p>
+                        <p class="timestamp">{{ message.timestamp }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Send</button>
+            </form>
+            <div class="extra-links">
+                <a href="{{ url_for('history') }}">View History</a> | <a href="{{ url_for('logout') }}">Logout</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

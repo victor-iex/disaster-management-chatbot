@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat History - DisasterAidBot</title>
+    <link rel="stylesheet" href="/static/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chat History</h1>
+        <div class="history">
+            {% for message in history %}
+                <div class="history-item">
+                    <p><strong>User ({{ message.timestamp }}):</strong> {{ message.user }}</p>
+                    <p><strong>Bot:</strong> {{ message.bot }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('chat') }}" class="btn">Back to Chat</a>
+        <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+    </div>
+</body>
+</html>
