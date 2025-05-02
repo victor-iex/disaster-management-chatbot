@@ -8,11 +8,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = os.getenv('SECRET_KEY', 'X7pL9qT3mW8rZkY2nF6vJ5bC4xD1tN')
+app.secret_key = os.getenv('SECRET_KEY', 'YOUR_SECURITY_KRY')
 
 # API Keys (replace with your own or use environment variables)
-GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', 'AIzaSyBRX-q1Pm7plCYBibKVQU4j5TWJ6U6Pbr4')
-NEWSAPI_KEY = os.getenv('NEWSAPI_KEY', 'your-newsapi-key')
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', 'YOUR_GEMINI_API_KEY')
+NEWSAPI_KEY = os.getenv('NEWSAPI_KEY', 'YOUR_NEWS_API_KEY')
 
 # Store chat history
 chat_history = []
