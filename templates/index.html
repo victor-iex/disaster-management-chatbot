@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disaster Aid Bot</title>
     <link rel="stylesheet" href="/static/static/css/style.css">
-    
 </head>
 <body>
-    <h1>Welcome to Disaster Aid Bot</h1>
-    <p>This is the homepage. Use the navigation to explore the app.</p>
-    <a href="/login">Login</a>
+    <div class="container">
+        <!-- Bot Name -->
+        <h1 class="bot-name" style="color: rgb(255, 255, 255);">Disaster Aid Bot</h1>
+
+        <!-- Description -->
+        <p class="description" style="color: rgb(255, 255, 255);">This is the homepage. Use the navigation to explore the app.</p>
+
+        <!-- Login Button -->
+        <a href="{{ url_for('login') }}" class="btn">Login</a>
+    </div>
 </body>
 </html>
