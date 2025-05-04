@@ -12,7 +12,7 @@ app.secret_key = os.getenv('SECRET_KEY', 'YOUR_API_KEY')
 
 # API Keys (replace with your own or use environment variables)
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', 'YOUR_API_KEY')
-NEWSAPI_KEY = os.getenv('NEWSAPI_KEY', '961bc9e0e9ca4bdcb8b8d504f9799b11')
+NEWSAPI_KEY = os.getenv('NEWSAPI_KEY', 'YOUR_API_KEY')
 OPENWEATHER_API_KEY = os.getenv('OPENWEATHER_API_KEY','YOUR_API_KEY')
 
 # Store chat history
